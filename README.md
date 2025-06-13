@@ -391,6 +391,8 @@ Giriş Alanı Temizliği: Kullanıcı bir mesaj gönderdikten sonra, mesajın ya
 Hugging Face Yanıt Kalitesi: Hugging Face API kısıtlamaları nedeniyle (deneme sürümünde API kredilerinin hızla tükenmesi gibi), model üzerinde istenildiği kadar derinlemesine fine-tuning veya test yapılamamıştır. Bu durum, Hugging Face modelinin yanıt kalitesinin Gemini kadar optimize edilememesine yol açmıştır. Tam sürüm API erişimi ile daha kapsamlı bir eğitim ve optimizasyon, performansını önemli ölçüde artırabilir.
 
 Proje Yapısı
+
+<pre>
 ├── .env                  # API anahtarları gibi hassas bilgileri içeren ortam değişkenleri dosyası
 ├── app/                  # Streamlit uygulamasını içeren dizin
 │   └── streamlit_app.py  # Ana Streamlit uygulama dosyası
@@ -415,7 +417,7 @@ Proje Yapısı
 ├── .gitignore            # Git versiyon kontrol sistemi için ignore edilecek dosyalar
 ├── README.md             # Proje hakkında genel bilgi, kurulum ve çalıştırma talimatları (bu belge)
 └── requirements.txt      # Projenin tüm bağımlılıklarını içeren dosya
-
+</pre>
 
 Proje için ekran görüntüleri aşağıda verilmiştir.
 
