@@ -1,0 +1,31 @@
+# Temel bağımlılıklar
+# pip3 install -r requirements.txt
+pandas>=2.0.0
+scikit-learn>=1.6.1
+openpyxl>=3.1.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.2
+
+# Streamlit ve eklentiler
+streamlit>=1.28.0
+
+# Makine öğrenmesi model işlemleri
+joblib>=1.3.0
+
+# Hugging Face bağımlılıkları
+transformers>=4.30.0
+torch>=2.7.1
+datasets>=2.14.0
+accelerate>=0.24.0
+
+# Google AI bağımlılıkları
+google-generativeai>=0.3.0
+langchain-google-genai>=0.0.8
+
+# Diğer yardımcı paketler
+python-dotenv>=1.0.0
+requests>=2.31.0
+tqdm>=4.65.0
+protobuf>=3.20.0,<4.0.0
+streamlit
