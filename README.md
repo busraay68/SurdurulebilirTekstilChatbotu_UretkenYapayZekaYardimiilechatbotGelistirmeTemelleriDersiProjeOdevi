@@ -277,7 +277,7 @@ Bitiş (Sohbet tamamlanır)
 Proje Kurulum ve Çalıştırma Aşamaları
 
 Proje, bağımlılıkların yönetimi ve kolay çalıştırılabilirlik için bir sanal ortam kullanılarak yapılandırılmıştır. Uygulamanın kullanıcı arayüzü Streamlit ile geliştirilmiştir.
-
+Python 3.9 kullanılmıştır.
 
 
 Başlangıç  
@@ -363,9 +363,6 @@ Uygulamayı Çalıştırma  
 Proje Çalıştırmaya Hazır!  
 
 
-
-Proje Çalışmasının Açıklanması
-
 Geliştirilen sohbet botu uygulaması, kullanıcı dostu bir arayüz sunmak üzere tasarlanmıştır.
 
 
@@ -423,37 +420,35 @@ Proje Yapısı
 Proje için ekran görüntüleri aşağıda verilmiştir.
 
 <img width="1440" alt="Ekran Resmi 2025-06-12 22 20 26" src="https://github.com/user-attachments/assets/640bb3dd-b9b7-4850-a0b8-26835578f880" />
-<img width="1440" alt="Ekran Resmi 2025-06-12 22 20 26" src="https://github.com/user-attachments/assets/640bb3dd-b9b7-4850-a0b8-26835578f880" />
 
-<img width="1440" alt="Ekran Resmi 2025-06-13 20 05 00" src="https://github.com/user-attachments/assets/70f9f55d-99e3-4569-8374-eb087106b59a" />
+
 <img width="1440" alt="Ekran Resmi 2025-06-13 20 05 00" src="https://github.com/user-attachments/assets/70f9f55d-99e3-4569-8374-eb087106b59a" />
 
 
 <img width="1440" alt="Ekran Resmi 2025-06-13 20 09 57" src="https://github.com/user-attachments/assets/e03905a6-15b2-4706-b9c8-dfce6fd44ade" />
-<img width="1440" alt="Ekran Resmi 2025-06-13 20 09 57" src="https://github.com/user-attachments/assets/e03905a6-15b2-4706-b9c8-dfce6fd44ade" />
 
 
 <img width="1440" alt="Ekran Resmi 2025-06-13 20 02 02" src="https://github.com/user-attachments/assets/d282a982-bbbc-4eaa-97f2-f0f21abcf1c1" />
-<img width="1440" alt="Ekran Resmi 2025-06-13 20 02 02" src="https://github.com/user-attachments/assets/d282a982-bbbc-4eaa-97f2-f0f21abcf1c1" />
+
 
 <img width="1440" alt="Ekran Resmi 2025-06-13 20 18 29" src="https://github.com/user-attachments/assets/034e08c2-d116-49d6-a2d4-ccd4f8d96ba2" />
-<img width="1440" alt="Ekran Resmi 2025-06-13 20 18 29" src="https://github.com/user-attachments/assets/034e08c2-d116-49d6-a2d4-ccd4f8d96ba2" />
+
 
 <img width="1440" alt="Ekran Resmi 2025-06-13 20 11 26" src="https://github.com/user-attachments/assets/698ac3e8-ba20-4ba1-abc8-659296d926f8" />
-<img width="1440" alt="Ekran Resmi 2025-06-13 20 11 26" src="https://github.com/user-attachments/assets/698ac3e8-ba20-4ba1-abc8-659296d926f8" />
+
 
 <img width="1440" alt="Ekran Resmi 2025-06-13 20 10 47" src="https://github.com/user-attachments/assets/90440b32-e147-4b0e-b16f-4956316165a3" />
-<img width="1440" alt="Ekran Resmi 2025-06-13 20 10 47" src="https://github.com/user-attachments/assets/90440b32-e147-4b0e-b16f-4956316165a3" />
+
 
 <img width="1440" alt="Ekran Resmi 2025-06-13 20 15 25" src="https://github.com/user-attachments/assets/962c7bab-ab32-45cb-ad2e-209a883c1a2e" />
-<img width="1440" alt="Ekran Resmi 2025-06-13 20 15 25" src="https://github.com/user-attachments/assets/962c7bab-ab32-45cb-ad2e-209a883c1a2e" />
+
 
 <img width="1440" alt="Ekran Resmi 2025-06-13 20 17 27" src="https://github.com/user-attachments/assets/fc1da86f-20b8-44e8-a0f9-80bde31a9413" />
-<img width="1440" alt="Ekran Resmi 2025-06-13 20 17 27" src="https://github.com/user-attachments/assets/fc1da86f-20b8-44e8-a0f9-80bde31a9413" />
+
 
 Herhangi hata durumunda ise aşağıdaki mesaj gönderiliyor
 
 <img width="1331" alt="Ekran Resmi 2025-06-13 22 22 08" src="https://github.com/user-attachments/assets/23fc3fab-0caf-410c-9ef1-076c6c124e35" />
-<img width="1331" alt="Ekran Resmi 2025-06-13 22 22 08" src="https://github.com/user-attachments/assets/23fc3fab-0caf-410c-9ef1-076c6c124e35" />
+
 
 
