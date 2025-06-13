@@ -192,15 +192,13 @@ Sonuçlar:
 
 
 
-Gemini Hugging Face
+           Gemini      Hugging Face
 
-Precision 0.6475 0.6136
+Precision  0.6475      0.6136
 
-Recall 0.6398 0.6137
+Recall     0.6398      0.6137
 
-F1 Score 0.6353 0.5972
-
-![image](https://github.com/user-attachments/assets/4955e953-8a8f-4012-bc26-beed616fdc0a)
+F1 Score   0.6353      0.5972
 
 
 Bu tablo, modellerin kesinlik (Precision), duyarlılık (Recall) ve F1-skoru (F1-Score) değerlerini karşılaştırarak hangi modelin daha iyi performans gösterdiğini özetlemektedir.
@@ -211,14 +209,11 @@ Karışıklık Matrisi:
 
 Hugging Face
 
-![image](https://github.com/user-attachments/assets/cb45f238-5694-46a5-bdd2-09e2e7f2d329)
-
+<img width="641" alt="Ekran Resmi 2025-06-13 22 13 05" src="https://github.com/user-attachments/assets/3e267359-1b07-4f43-856e-100b77dda419" />
 
 
 Gemini
-
-<img width="399" alt="gemini" src="https://github.com/user-attachments/assets/f470dcea-f7bd-4f53-8960-b0ae6298c4cb" />
-
+<img width="1440" alt="gemini" src="https://github.com/user-attachments/assets/e593c810-e2fa-4e5a-bb64-c2e82fffa548" />
 
 
 Sonuçlara göre, Gemini modeli Hugging Face modeline kıyasla biraz daha yüksek Precision, Recall ve F1-Score değerleri göstermiştir. Bu, Gemini modelinin, projenin mevcut veri seti ve görev tanımı bağlamında biraz daha iyi performans sergilediğini düşündürmektedir. Her iki model için de karışıklık matrisleri, hangi niyetlerin birbirine karıştırıldığını detaylı olarak göstermektedir, bu da gelecekteki geliştirmeler için yol göstericidir.
@@ -388,12 +383,9 @@ Sohbet Geçmişini Temizleme: Sohbetin uzaması ve kafa karışıklığını ön
 Kullanıcı Dostu Tasarım: Uygulama, basit ve anlaşılır bir kullanıcı arayüzü ile tasarlanmıştır. Renkler ve düzen, rahat bir sohbet deneyimi sağlamayı hedefler.
 
 
-
 Projede Geliştirilebilecek Yönler ve Eksiklikler
 
 Her proje gibi, bu chatbot uygulamasının da geliştirilmeye açık yönleri ve bazı eksiklikleri bulunmaktadır:
-
-
 
 Yanıt Hızı: Özellikle Hugging Face modelinin API kısıtlamaları ve model büyüklüğü nedeniyle yanıt süreleri, Gemini modeline kıyasla daha yavaş olabilmektedir. Bu durum, anlık geri bildirim bekleyen kullanıcılar için bir dezavantaj oluşturabilir. Gelecekte daha optimize edilmiş modeller veya daha yüksek API limitleri ile bu sorun giderilebilir.
 
@@ -401,5 +393,67 @@ Giriş Alanı Temizliği: Kullanıcı bir mesaj gönderdikten sonra, mesajın ya
 
 Hugging Face Yanıt Kalitesi: Hugging Face API kısıtlamaları nedeniyle (deneme sürümünde API kredilerinin hızla tükenmesi gibi), model üzerinde istenildiği kadar derinlemesine fine-tuning veya test yapılamamıştır. Bu durum, Hugging Face modelinin yanıt kalitesinin Gemini kadar optimize edilememesine yol açmıştır. Tam sürüm API erişimi ile daha kapsamlı bir eğitim ve optimizasyon, performansını önemli ölçüde artırabilir.
 
+Proje Yapısı
+├── .env                  # API anahtarları gibi hassas bilgileri içeren ortam değişkenleri dosyası
+├── app/                  # Streamlit uygulamasını içeren dizin
+│   └── streamlit_app.py  # Ana Streamlit uygulama dosyası
+├── data/                 # Veri setlerinin bulunduğu dizin
+│   ├── chatbot_dataset.xlsx # Orijinal veri seti
+│   ├── train_data.csv    # Eğitim için ayrılmış veri
+│   └── test_data.csv     # Test için ayrılmış veri
+├── models/               # Model eğitim ve fine-tuning kodlarının bulunduğu dizin
+│   ├── gemini_model.py   # Gemini (TF-IDF + Lojistik Regresyon) modelinin eğitim kodu
+│   └── huggingface_model.py # Hugging Face (DistilBERT) modelinin fine-tuning kodu
+├── results/              # Model eğitim sonuçları, kaydedilmiş modeller ve görselleştirmeler
+│   ├── gemini_trained_model/ # Eğitilmiş Gemini modeli objelerinin saklandığı dizin
+│   │   └── gemini_pipeline.pkl # Kaydedilmiş Gemini model pipeline'ı
+│   ├── hf_trained_model/     # Eğitilmiş Hugging Face modelinin ağırlık ve konfigürasyon dosyaları
+│   │   ├── config.json
+│   │   ├── pytorch_model.bin
+│   │   └── tokenizer.json
+│   ├── gemini_results.txt    # Gemini modelinin performans sonuçları (karışıklık matrisi vb.)
+│   └── hf_results.txt        # Hugging Face modelinin performans sonuçları (karışıklık matrisi vb.)
+├── utils/               
+│   └── traintestayrimi.py # Veri setini train ve test olarak ayıran Python betiği
+├── .gitignore            # Git versiyon kontrol sistemi için ignore edilecek dosyalar
+├── README.md             # Proje hakkında genel bilgi, kurulum ve çalıştırma talimatları (bu belge)
+└── requirements.txt      # Projenin tüm bağımlılıklarını içeren dosya
+
+
+Proje için ekran görüntüleri aşağıda verilmiştir.
+
+<img width="1440" alt="Ekran Resmi 2025-06-12 22 20 26" src="https://github.com/user-attachments/assets/640bb3dd-b9b7-4850-a0b8-26835578f880" />
+<img width="1440" alt="Ekran Resmi 2025-06-12 22 20 26" src="https://github.com/user-attachments/assets/640bb3dd-b9b7-4850-a0b8-26835578f880" />
+
+<img width="1440" alt="Ekran Resmi 2025-06-13 20 05 00" src="https://github.com/user-attachments/assets/70f9f55d-99e3-4569-8374-eb087106b59a" />
+<img width="1440" alt="Ekran Resmi 2025-06-13 20 05 00" src="https://github.com/user-attachments/assets/70f9f55d-99e3-4569-8374-eb087106b59a" />
+
+
+<img width="1440" alt="Ekran Resmi 2025-06-13 20 09 57" src="https://github.com/user-attachments/assets/e03905a6-15b2-4706-b9c8-dfce6fd44ade" />
+<img width="1440" alt="Ekran Resmi 2025-06-13 20 09 57" src="https://github.com/user-attachments/assets/e03905a6-15b2-4706-b9c8-dfce6fd44ade" />
+
+
+<img width="1440" alt="Ekran Resmi 2025-06-13 20 02 02" src="https://github.com/user-attachments/assets/d282a982-bbbc-4eaa-97f2-f0f21abcf1c1" />
+<img width="1440" alt="Ekran Resmi 2025-06-13 20 02 02" src="https://github.com/user-attachments/assets/d282a982-bbbc-4eaa-97f2-f0f21abcf1c1" />
+
+<img width="1440" alt="Ekran Resmi 2025-06-13 20 18 29" src="https://github.com/user-attachments/assets/034e08c2-d116-49d6-a2d4-ccd4f8d96ba2" />
+<img width="1440" alt="Ekran Resmi 2025-06-13 20 18 29" src="https://github.com/user-attachments/assets/034e08c2-d116-49d6-a2d4-ccd4f8d96ba2" />
+
+<img width="1440" alt="Ekran Resmi 2025-06-13 20 11 26" src="https://github.com/user-attachments/assets/698ac3e8-ba20-4ba1-abc8-659296d926f8" />
+<img width="1440" alt="Ekran Resmi 2025-06-13 20 11 26" src="https://github.com/user-attachments/assets/698ac3e8-ba20-4ba1-abc8-659296d926f8" />
+
+<img width="1440" alt="Ekran Resmi 2025-06-13 20 10 47" src="https://github.com/user-attachments/assets/90440b32-e147-4b0e-b16f-4956316165a3" />
+<img width="1440" alt="Ekran Resmi 2025-06-13 20 10 47" src="https://github.com/user-attachments/assets/90440b32-e147-4b0e-b16f-4956316165a3" />
+
+<img width="1440" alt="Ekran Resmi 2025-06-13 20 15 25" src="https://github.com/user-attachments/assets/962c7bab-ab32-45cb-ad2e-209a883c1a2e" />
+<img width="1440" alt="Ekran Resmi 2025-06-13 20 15 25" src="https://github.com/user-attachments/assets/962c7bab-ab32-45cb-ad2e-209a883c1a2e" />
+
+<img width="1440" alt="Ekran Resmi 2025-06-13 20 17 27" src="https://github.com/user-attachments/assets/fc1da86f-20b8-44e8-a0f9-80bde31a9413" />
+<img width="1440" alt="Ekran Resmi 2025-06-13 20 17 27" src="https://github.com/user-attachments/assets/fc1da86f-20b8-44e8-a0f9-80bde31a9413" />
+
+Herhangi hata durumunda ise aşağıdaki mesaj gönderiliyor
+
+<img width="1331" alt="Ekran Resmi 2025-06-13 22 22 08" src="https://github.com/user-attachments/assets/23fc3fab-0caf-410c-9ef1-076c6c124e35" />
+<img width="1331" alt="Ekran Resmi 2025-06-13 22 22 08" src="https://github.com/user-attachments/assets/23fc3fab-0caf-410c-9ef1-076c6c124e35" />
 
 
